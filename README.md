@@ -44,12 +44,12 @@ public class Write {
         Configuration configuration = new Configuration();
         configuration.set("fs.defaultFS", "hdfs://localhost:9000");
         FileSystem fs = FileSystem.get(configuration);
-        Path path = new Path("/SIA/CPP/Cours/CoursCPP1");
+        Path path = new Path("/SDIA/CPP/Cours/CoursCPP1");
         FSDataOutputStream fsdos = fs.create(path);
         BufferedWriter br = new BufferedWriter(new OutputStreamWriter(fsdos, StandardCharsets.UTF_8));
         br.write("SDIA 2");
         br.newLine();
-        br.write("SIA 2");
+        br.write("SDIA 2");
         br.close();
         fs.close();
     }
